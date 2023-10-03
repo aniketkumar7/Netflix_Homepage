@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', Arial, Bebas Neue, sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: black;
+}
+
+.container{
+    height: 80vh;
+    width: 100vw;    
+}
+
+.container::before{
+    content: '';
+    background: url(netflix.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.header{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3rem 10rem;
+}
+
+.header .left img{
+    height: 100px;
+}
+
+@media (max-width : 1200px){
+    .header{
+        padding: 0 3rem;
+    }
+
+    .header .left img{
+        height: 90px;
+    }
+
+    .content h1{
+        font-size: 2rem;
+    }
+}
+
+.container .language{
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    padding: 7px;
+    border-radius: 3px;
+    color: white;
+    backdrop-filter: blur(8px);
+    background: rgba(22, 22, 22, 0.313);
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+
+.container .navbar .navbar-right .language option{
+    background: rgb(179, 177, 177);
+}
+
+.header  button{
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 7px 10px;
+    background: #e50914;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+}
+
+.header  button:hover{
+    background: #c7030d;
+}
+
+ .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40rem;
+} 
+
+.container .title .content{
+  display: grid;
+  place-items: center;
+}
+
+.container .heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content h1{
+    font-size: 3rem;
+    width: 1060px;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.content h2{
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 650px;
+    margin: auto;
+    text-align: center;
+}
+
+.container .content form{
+    display: grid;
+    place-items: center;
+}
+
+.content form h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 22px 0;
+    text-align: center;
+}
+
+.email{
+    display: flex;
+}
+
+.email input{
+    backdrop-filter: blur(4px);
+    background-color: rgb(17, 17, 17);
+    background: transparent;
+    width: 400px;
+    border: 1px solid grey;
+    border-radius: 2px;
+    height: 55px;
+    padding: 20px;
+    font-size: 17px;
+    outline: none;
+    color: white;
+}
+
+.email button{
+    height: 55px;
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 5px 17px;
+    background: #e50914;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+}
+
+.email button:hover{
+    background: #b5060f;
+}
+
+@media (max-width : 1200px){
+    .email input{
+        width: 300px;
+    }
+
+    .content h1{
+        font-size: 2rem;
+        width: 600px;
+        font-weight: 600;
+    }
+
+    .content h2{
+        font-size: 1.2rem;
+    }
+
+    .content form h3{
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width : 800px){
+    .container .title .content form .email {
+        width: 200px;
+    }
+
+    .header .left img {
+        height: 60px;
+    }
+
+    .header{
+        padding: 0 2rem;
+    }
+
+    .email{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .content h1{
+        width: 400px;
+    }
+
+    .content form h3{
+        width: 300px;
+    }
+
+    .email button{
+        width: 150px;
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width : 500px){
+    .email input{
+        width: 250px;
+        padding: 18px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .content h1{
+        font-size: 1.8rem;
+        width: 300px;
+    }
+
+    .container .language{
+        width: 90px;
+    }
+
+    .content h2{
+        font-size: 1rem;
+    }
+    .content form h3{
+        font-size: 1rem;
+        width: 250px;
+        line-height: 30px;
+    }
+    .email button{
+        width: 160px;
+        padding: 10px; 
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .title{
+        height: 35rem;
+    }
+}
